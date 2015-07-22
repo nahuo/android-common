@@ -4,14 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingLeft="5dp"
-    android:paddingRight="5dp" >
+    android:paddingRight="5dp">
 
     <ImageView
         android:id="@android:id/icon1"
         android:layout_width="12dp"
         android:layout_height="6dp"
         android:contentDescription="@android:string/ok"
-        android:src="@drawable/menu_arrow_up" />
+        android:src="@mipmap/menu_arrow_up" />
 
     <ListView
         android:id="@android:id/list"
