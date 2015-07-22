@@ -16,4 +16,9 @@
         <attr name="nh_rv_zoom" format="boolean" />
         <attr name="nh_rv_zoomScale" format="float" />
     </declare-styleable>
+
+    <declare-styleable name="NhCircleImageView">
+        <attr name="nh_civ_border_width" format="dimension" />
+        <attr name="nh_civ_border_color" format="color" />
+    </declare-styleable>
 </resources>

@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 
 /**
  * touch监听layout，用于滑动返回到上一个界面
- * Created by JorsonWong on 2015/6/18.
+ * Created by JorsonWong on 2015/7/22.
  */
 public class TouchLinearLayout extends LinearLayout {
 

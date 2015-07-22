@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="rippleColor">#FFDDDDDD</color>
+    <color name="share_menu_item_n">#333B3D</color>
+    <color name="share_menu_item_p">#262C2C</color>
+    <color name="dialog_loading_background">#80000000</color>
+
 </resources>
