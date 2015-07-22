@@ -10,5 +10,5 @@ Gradle
 --------
 
 ```groovy
-compile 'com.nahuo.library:common:0.1.0'
+compile 'com.nahuo.library:common:版本号' //版本号看上面download那个徽章
 ```
