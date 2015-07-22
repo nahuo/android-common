@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * description 垂直列表弹出窗，类似于标题栏点击menu弹出
+ * 垂直列表弹出窗，类似于标题栏点击menu弹出
  * Created by JorsonWong on 2015/7/22.
  */
 public class PoplList extends PopupWindow implements OnItemClickListener {
@@ -82,9 +82,6 @@ public class PoplList extends PopupWindow implements OnItemClickListener {
         return this;
     }
 
-    /**
-     * @return
-     */
     private PoplList create() {
         List<Map<String, Object>> maps = new ArrayList<Map<String, Object>>();
 
@@ -102,9 +99,6 @@ public class PoplList extends PopupWindow implements OnItemClickListener {
         return this;
     }
 
-    /**
-     * @param listener
-     */
     public PoplList setMenuItemClickListener(OnItemClickListener listener) {
         this.mMenuItemClickListener = listener;
         return this;
@@ -119,11 +113,6 @@ public class PoplList extends PopupWindow implements OnItemClickListener {
         dismiss();
     }
 
-    /**
-     * 显示菜单
-     *
-     * @param anchor
-     */
     public void show(View anchor) {
 
         create();
@@ -162,9 +151,6 @@ public class PoplList extends PopupWindow implements OnItemClickListener {
         public int id;
         private Object tag;
 
-        /**
-         * @param itemText ：item 文字
-         */
         public VerticalPopMenuItem(String itemText) {
             this.itemText = itemText;
         }
@@ -175,19 +161,10 @@ public class PoplList extends PopupWindow implements OnItemClickListener {
             this.itemText = itemText;
         }
 
-        /**
-         * @param leftIconResId :item 左边图标，不显示传0
-         * @param itemText      ：item 文字
-         */
         public VerticalPopMenuItem(int leftIconResId, String itemText) {
             this(0, leftIconResId, itemText);
         }
 
-        /**
-         * @param leftIconResId  :item 左边图标，不显示传0
-         * @param itemText       ：item 文字
-         * @param rightIconResId :item 右边边图标，不显示传0
-         */
         public VerticalPopMenuItem(int leftIconResId, String itemText, int rightIconResId) {
             this.leftIconResId = leftIconResId;
             this.itemText = itemText;

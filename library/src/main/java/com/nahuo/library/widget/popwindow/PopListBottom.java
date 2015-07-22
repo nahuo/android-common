@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * description:底部弹出菜单,list形式，类似于上传头像时选择拍照和从相处选
+ * 底部弹出菜单,list形式，类似于上传头像时选择拍照和从相处选
  * Created by JorsonWong on 2015/7/22.
  */
 public class PopListBottom extends PopupWindow implements OnItemClickListener, View.OnClickListener {
@@ -79,11 +79,6 @@ public class PopListBottom extends PopupWindow implements OnItemClickListener, V
         return this;
     }
 
-    /**
-     * @description 显示菜单栏
-     * @created 2015年3月20日 上午11:22:23
-     * @author JorsonWong
-     */
     public void show() {
 
         create();
@@ -111,11 +106,6 @@ public class PopListBottom extends PopupWindow implements OnItemClickListener, V
         return statusHeight;
     }
 
-    /**
-     * @description item click callback
-     * @created 2015年3月20日 上午11:21:15
-     * @author JorsonWong
-     */
     public PopListBottom setOnMenuItemClickListener(OnItemClickListener listener) {
         this.mMenuItemClickListener = listener;
         return this;

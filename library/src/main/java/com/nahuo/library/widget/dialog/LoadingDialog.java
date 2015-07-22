@@ -45,11 +45,6 @@ public class LoadingDialog extends Dialog {
         animation.start();
     }
 
-    /**
-     * 设置提示信息
-     *
-     * @param message 提示信息
-     */
     public void setMessage(String message) {
         TextView tvMsg = (TextView) findViewById(R.id.loadingdialog_message);
         if (tvMsg != null) {
@@ -57,18 +52,10 @@ public class LoadingDialog extends Dialog {
         }
     }
 
-    /**
-     * 弹出等待提示框
-     */
     public void start() {
         start("正在加载数据，请稍候...");
     }
 
-    /**
-     * 弹出等待提示框
-     *
-     * @param message 提示信息
-     */
     public void start(String message) {
         try {
             setMessage(message);
@@ -79,9 +66,6 @@ public class LoadingDialog extends Dialog {
         }
     }
 
-    /**
-     * 关闭等待提示框
-     */
     public void stop() {
         if (imageView != null && imageView.getAnimation() != null) {
             imageView.clearAnimation();

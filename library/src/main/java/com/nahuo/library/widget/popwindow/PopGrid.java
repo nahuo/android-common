@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * description 网格形状的PopupWindow, 类似于：分享的小菜单
+ *  网格形状的PopupWindow, 类似于：分享的小菜单
  * Created by JorsonWong on 2015/7/22.
  */
 public class PopGrid extends PopupWindow implements OnItemClickListener {
@@ -71,12 +71,6 @@ public class PopGrid extends PopupWindow implements OnItemClickListener {
         });
     }
 
-    /**
-     * 添加menu item
-     *
-     * @param item
-     * @return
-     */
     public PopGrid addMenuItem(ShareMenuItem item) {
         menuItems.add(item);
         return this;
@@ -99,11 +93,6 @@ public class PopGrid extends PopupWindow implements OnItemClickListener {
     }
 
 
-    /**
-     * @description 显示popwindow, 带图标
-     * @created 2015年3月20日 上午11:06:35
-     * @author JorsonWong
-     */
     public void show(View v) {
         initPopWindow(v);
         // setItemData(items, iconRes);
@@ -115,26 +104,7 @@ public class PopGrid extends PopupWindow implements OnItemClickListener {
 
     }
 
-    /**
-     * @description 显示popwindow
-     * @created 2015年3月20日 上午11:06:35
-     * @author JorsonWong
-     */
-    // public void show(View v, String[] items) {
-    // initPopWindow(v, items.length);
-    // setItemData(items);
-    // int spacing = DisplayUtil.dip2px(mActivity, SPACING);
-    // showAtLocation(v, Gravity.NO_GRAVITY,
-    // isAnchorOnScreenLeft ? mAnchorLocation[0] + v.getWidth()
-    // + spacing : mAnchorLocation[0] - getWidth() - spacing,
-    // mAnchorLocation[1]);
-    // }
 
-    /**
-     * @description 初始化popwindow
-     * @created 2015年3月20日 上午11:15:40
-     * @author JorsonWong
-     */
     private void initPopWindow(View v) {
         int maxWidth;
         Display display = mActivity.getWindowManager().getDefaultDisplay();
@@ -166,11 +136,6 @@ public class PopGrid extends PopupWindow implements OnItemClickListener {
 
     }
 
-    /**
-     * @description item click callback
-     * @created 2015年3月20日 上午11:21:15
-     * @author JorsonWong
-     */
     public PopGrid setMenuItemClickListener(OnItemClickListener listener) {
         this.mOnItemClickListener = listener;
         return this;
@@ -188,17 +153,10 @@ public class PopGrid extends PopupWindow implements OnItemClickListener {
         public int iconResId = 0;
         public String text;
 
-        /**
-         * @param text :menu item text
-         */
         public ShareMenuItem(String text) {
             this.text = text;
         }
 
-        /**
-         * @param text      :menu item text
-         * @param iconResId :menu item 图标
-         */
         public ShareMenuItem(String text, int iconResId) {
             this.text = text;
             this.iconResId = iconResId;
