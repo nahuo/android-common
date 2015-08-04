@@ -1,16 +1,50 @@
 package com.nahuo.library.utils;
 
 import android.content.Context;
+import android.content.res.Resources;
 
 /**
  * Android大小单位转换工具类
  */
 public class DisplayUtil {
-    
-    
+
+    /**
+     * dp转为px
+     * @param dp dp值
+     * @return px值
+     */
+    public static int dpToPx(int dp){
+        return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
+    }
+
+    /**
+     * px转为dp
+     * @param px px值
+     * @return dp值
+     */
+    public static int pxToDp(int px){
+        return (int) (px / Resources.getSystem().getDisplayMetrics().density);
+    }
+
+    /**
+     * 获取屏幕宽度
+     * @return 屏幕宽度
+     */
+    public static int getScreenWidth(){
+        return Resources.getSystem().getDisplayMetrics().widthPixels;
+    }
+
+    /**
+     * 获取屏幕高度
+     * @return 屏幕高度
+     */
+    public static int getScreenHeight(){
+        return Resources.getSystem().getDisplayMetrics().heightPixels;
+    }
     
     /** 
-     * 根据手机的分辨率从 dp 的单位 转成为 px(像素) 
+     * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
+     * @deprecated Use {@link #dpToPx(int)} instead
      */  
     public static int dip2px(Context context, float dpValue) {  
         final float scale = context.getResources().getDisplayMetrics().density;  
@@ -18,7 +52,8 @@ public class DisplayUtil {
     }  
   
     /** 
-     * 根据手机的分辨率从 px(像素) 的单位 转成为 dp 
+     * 根据手机的分辨率从 px(像素) 的单位 转成为 dp
+     * @deprecated Use {@link #pxToDp(int)} instead
      */  
     public static int px2dip(Context context, float pxValue) {  
         final float scale = context.getResources().getDisplayMetrics().density;  
