@@ -26,7 +26,7 @@ import java.util.Map;
  * 垂直列表弹出窗，类似于标题栏点击menu弹出
  * Created by JorsonWong on 2015/7/22.
  */
-public class PoplList extends PopupWindow implements OnItemClickListener {
+public class PopList extends PopupWindow implements OnItemClickListener {
 
     private Activity mActivity;
     private View mRootView;
@@ -36,7 +36,7 @@ public class PoplList extends PopupWindow implements OnItemClickListener {
     private ImageView mIconArrowTop, mIconArrowBottom;
     private static final int WINDOW_WIDTH = 150;                                                 // dip
 
-    public PoplList(Activity activity) {
+    public PopList(Activity activity) {
         super();
         this.mActivity = activity;
         initViews();
@@ -72,17 +72,17 @@ public class PoplList extends PopupWindow implements OnItemClickListener {
         mListView.setDivider(mActivity.getResources().getDrawable(drawableResId));
     }
 
-    public PoplList addMenuItem(VerticalPopMenuItem menuItem) {
+    public PopList addMenuItem(VerticalPopMenuItem menuItem) {
         mVerticalMenuItems.add(menuItem);
         return this;
     }
 
-    public PoplList addMenuItems(List<VerticalPopMenuItem> items) {
+    public PopList addMenuItems(List<VerticalPopMenuItem> items) {
         mVerticalMenuItems.addAll(items);
         return this;
     }
 
-    private PoplList create() {
+    private PopList create() {
         List<Map<String, Object>> maps = new ArrayList<Map<String, Object>>();
 
         for (VerticalPopMenuItem item : mVerticalMenuItems) {
@@ -99,7 +99,7 @@ public class PoplList extends PopupWindow implements OnItemClickListener {
         return this;
     }
 
-    public PoplList setMenuItemClickListener(OnItemClickListener listener) {
+    public PopList setMenuItemClickListener(OnItemClickListener listener) {
         this.mMenuItemClickListener = listener;
         return this;
     }
